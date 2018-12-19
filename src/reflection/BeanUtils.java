@@ -20,13 +20,13 @@ public class BeanUtils {
     }
 
     private static List<String> getMethods(Class<?> aClass, String methodName) {
-        List<String> getters = new ArrayList<>();
+        List<String> arrayOfMethods = new ArrayList<>();
         int beginIndex = methodName.length();
         for (Method method: aClass.getMethods()) {
             if (method.getName().substring(0, beginIndex).equals(methodName)) {
-                getters.add(method.getName().substring(beginIndex));
+                arrayOfMethods.add(method.getName().substring(beginIndex));
             }
         }
-        return getters;
+        return arrayOfMethods;
     }
 }

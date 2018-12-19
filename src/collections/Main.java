@@ -10,12 +10,12 @@ public class Main {
         System.out.println(getCountUniqueWords("input.txt"));
         System.out.println(getSortedUniqueWords("input.txt"));
         System.out.println(getWordFrequency("input.txt"));
-        System.out.println(getReverseOrder("input.txt").toString());
+        System.out.println(getReverseOrder("input.txt"));
         List<Integer> userList = new ArrayList<>();
         userList.add(3);
         userList.add(1);
         userList.add(2);
-        System.out.println(getLines("input.txt", userList).toString());
+        System.out.println(getLines("input.txt", userList));
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);

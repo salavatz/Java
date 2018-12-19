@@ -30,11 +30,11 @@ public class CollectionUtils {
         removeFrom.removeAll(c2);
     }
 
-    public static<T> boolean containsAll(List<? super T> c1, List<? extends T> c2) {
+    public static<T> boolean containsAll(List<? extends T> c1, List<? extends T> c2) {
         return c1.containsAll(c2);
     }
 
-    public static<T> boolean containsAny(List<? super T> c1, List<? extends T> c2) {
+    public static<T> boolean containsAny(List<? extends T> c1, List<? extends T> c2) {
         for (T element: c2) {
             if (c1.contains(element)) {
                 return true;
@@ -53,7 +53,7 @@ public class CollectionUtils {
         return list1;
     }
 
-    public static<T> List<T> range(List<? extends T> list, T min, T max, Comparator comparator) {
+    public static<T> List<T> range(List<? extends T> list, T min, T max, Comparator<? super T> comparator) {
         List<T> list1 = new ArrayList<>();
         for (T element: list) {
             if (comparator.compare(element, min) >= 0 && comparator.compare(element, max) <=0) {
